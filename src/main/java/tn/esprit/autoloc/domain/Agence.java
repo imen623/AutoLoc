@@ -3,6 +3,7 @@ package tn.esprit.autoloc.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,8 +23,8 @@ public class Agence {
     private String telephone;
 
     @OneToMany(mappedBy = "agence")
-    private List<Employe> employes;
+    private List<Employe> employes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "vehicule")
-    private List<Vehicule> vehicules;
+    @OneToMany(mappedBy = "agence")
+    private List<Vehicule> vehicules = new ArrayList<>();
 }
