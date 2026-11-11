@@ -10,4 +10,5 @@ public interface EquipementService {
     Equipement addEquipement(Equipement entity);
     void removeEquipement(Long id);
     Equipement modifyEquipement(Equipement entity);
+
 }

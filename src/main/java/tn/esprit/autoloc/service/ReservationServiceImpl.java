@@ -37,4 +37,9 @@ public class ReservationServiceImpl implements ReservationService {
     public Reservation modifyReservation(Reservation entity) {
         return repository.save(entity);
     }
+
+    @Override
+    public Reservation ajouterContratReservation(Reservation r) {
+        return null;
+    }
 }

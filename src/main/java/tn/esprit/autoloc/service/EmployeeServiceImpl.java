@@ -1,4 +1,5 @@
 package tn.esprit.autoloc.service;
+import tn.esprit.autoloc.domain.Agence;
 import tn.esprit.autoloc.domain.Employe;
 import tn.esprit.autoloc.repository.EmployeRepository;
 import tn.esprit.autoloc.repository.AgenceRepository;
@@ -39,6 +40,17 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employe modifyEmployee(Employe employee) {
         return employeRepository.save(employee);
+    }
+    @Override
+    public Employe affecterAgenceEmployee(Long idEmployee, Long idAgence) {
+        //DONNEES 
+        Employe employe = employeRepository.findById(idEmployee).orElse(null);
+        Agence agence = agenceRepository.findById(idAgence).orElse(null);
+        // Affectation
+       assert employe != null;
+       employe.setAgence(agence);
+        //save 
+        return employeRepository.save(employe);
     }
 
  }

@@ -11,5 +11,6 @@ public Employe addEmployee(Employe employee);
 public void removeEmployee(Long employeeId);  
 public Employe modifyEmployee(Employe employee);
 
+Employe affecterAgenceEmployee(Long idEmployee, Long idAgence);
 
 }

@@ -10,4 +10,5 @@ public interface ReservationService {
     Reservation addReservation(Reservation entity);
     void removeReservation(Long id);
     Reservation modifyReservation(Reservation entity);
+    Reservation ajouterContratReservation(Reservation r);
 }

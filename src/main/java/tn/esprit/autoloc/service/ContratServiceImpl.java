@@ -2,7 +2,9 @@ package tn.esprit.autoloc.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import tn.esprit.autoloc.domain.Client;
 import tn.esprit.autoloc.domain.Contrat;
+import tn.esprit.autoloc.domain.Reservation;
 import tn.esprit.autoloc.repository.ContratRepository;
 
 import java.util.List;
@@ -36,5 +38,10 @@ public class ContratServiceImpl implements ContratService {
     @Override
     public Contrat modifyContrat(Contrat entity) {
         return repository.save(entity);
+    }
+
+    @Override
+    public Client ajouterContratClient(Contrat c) {
+        return null;
     }
 }

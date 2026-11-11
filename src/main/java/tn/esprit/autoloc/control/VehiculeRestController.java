@@ -59,5 +59,9 @@ public class VehiculeRestController {
     public Vehicule modifyVehicule(@RequestBody Vehicule c) {  Vehicule vehicule = vehiculeService.modifyVehicule(c);  return vehicule;
     }
 
-}
+    @PutMapping("/affecter-equipement-vehicule/{idVehicule}/{idEquipement}")
+    public Vehicule affecterEquipementVehicule(@PathVariable("idVehicule") Long idVehicule, @PathVariable("idEquipement") Long idEquipement) {
+        return vehiculeService.affecterEquipementVehicule(idVehicule, idEquipement);
+    }
 
+}
