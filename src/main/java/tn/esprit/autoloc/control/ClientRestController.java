@@ -51,8 +51,6 @@ public class ClientRestController {
     public Client ajouterClierntReservation(@RequestBody Client c) {
         return service.ajouterClierntReservation(c);
     }
-
-
     @Operation(description = "Recuperer Client par son nom, prenom et categorie vehicule")
     @GetMapping("/retrieve-client-by-nom-prenom-categorie/{n}/{p}/{cv}")
     public List<Client> recupererPrenomNomEtCategorieVehicule(@PathVariable String n,@PathVariable String p,@PathVariable CategorieVehicule cv) {
